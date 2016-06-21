@@ -1,1 +1,1 @@
-Hotel Reservation application
+Hotel Reservation System application
