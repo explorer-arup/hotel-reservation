@@ -7,16 +7,14 @@
             <div id="error-msg"></div> 
       		  {!! Form::open() !!}
             <div class="control-group"> 
-              {!! Form::label('room_no','Room Number') !!}
-              {!! Form::text('room_no','', ['class'=>'span4']) !!}
+              {!! Form::label('date','Booking Date') !!}
+              {!! Form::text('booking_date',date('d-m-Y'), ['class'=>'span4']) !!}
             </div>
             <div class="control-group"> 
-              {!! Form::label('description','Description') !!}
-              {!! Form::textarea('description','',['class'=>'span4']) !!}
-            </div>
+              @include('bookings._subtemplates.create-customer')
+            </div>  
             <div class="control-group"> 
-              {!! Form::label('features','Available Features') !!} <br/>
-
+              @include('bookings._subtemplates.room-availability')
             </div>
             {!! Form::close() !!}
           </div>
